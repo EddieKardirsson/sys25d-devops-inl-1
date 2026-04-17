@@ -4,8 +4,8 @@ import SalaryCalculator from './components/SalaryCalculator.vue';
 </script>
 
 <template>
-  <HelloWorld />
   <div id="app">
+    <HelloWorld /> <!-- This change was only for testing the pre-commit hook -->
     <SalaryCalculator />
   </div>
 </template>
