@@ -9,5 +9,5 @@ export function calculateNetSalary(
 
     const taxableIncome = grossSalary - deductions;
     const taxAmount = taxableIncome * (taxRate / 100);
-  return grossSalary - taxAmount - deductions;
+  return grossSalary - taxAmount;
 }
