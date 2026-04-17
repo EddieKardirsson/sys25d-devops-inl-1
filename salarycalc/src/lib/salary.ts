@@ -1,3 +1,10 @@
+
+
+ /*
+  * 1. Calculate taxable income (grossSalary - deductions)
+  * 2. Calculate tax amount (taxableIncome * taxRate)
+  * 3. Return net salary (grossSalary - taxAmount)
+  */
 export function calculateNetSalary(
   grossSalary: number,
   taxRate: number, // in percent, not decimal value
