@@ -29,6 +29,7 @@ The application itself is intentionally simple — the focus of this project is 
 - **Build tool:** Vite
 - **Package manager:** pnpm
 - **Testing:** Vitest
+- **Git hooks:** Husky
 - **CI/CD:** GitHub Actions
 - **Deployment:** GitHub Pages
 
@@ -50,13 +51,52 @@ The pipeline is triggered automatically on:
 
 ---
 
+## 💻 Local Setup
+
+This repository uses a **root-level Husky setup** and the actual application lives in the `salarycalc/` subfolder.
+
+### Install dependencies
+
+From the repository root:
+
+```bash
+pnpm install
+cd salarycalc
+pnpm install
+```
+
+- The first `pnpm install` installs **Husky** and sets up Git hooks
+- The second `pnpm install` installs the app dependencies for **SalaryCalc**
+
+---
+
+## ▶️ Run the Application Locally
+
+From the `salarycalc/` folder:
+
+```bash
+pnpm dev
+```
+
+Then open the local Vite URL shown in the terminal.
+
+---
+
 ## 🧪 Testing Strategy
 
 - Unit tests are written with **Vitest**
 - Tests are run:
-    - Locally via `pnpm test`
-    - Automatically in CI before deployment
-- Commits are blocked locally if tests fail (pre-commit hook)
+  - Locally via `pnpm test`
+  - Automatically in CI before deployment
+- Commits are blocked locally if tests fail via a **Husky pre-commit hook**
+
+To run tests manually:
+
+```bash
+cd salarycalc 
+pnpm test
+```
+or just `pnpm test` from the project root, since you're probably already in the `salarycalc/` folder.
 
 ---
 
@@ -67,6 +107,8 @@ A local pre-commit hook ensures that:
 - Unit tests must pass before a commit is allowed
 
 This prevents failing code from reaching the CI pipeline.
+
+The hook is managed with **Husky** and is installed when dependencies are installed in the repository root.
 
 ---
 
@@ -96,6 +138,8 @@ The project uses **GitHub Releases** to mark stable versions.
 ├── .github/
 │   └── workflows/
 │       └── ci.yaml
+├── .husky/
+│   └── pre-commit
 ├── salarycalc/
 │   ├── src/
 │   ├── public/
@@ -103,5 +147,7 @@ The project uses **GitHub Releases** to mark stable versions.
 │   ├── package.json
 │   ├── pnpm-lock.yaml
 │   └── vite.config.ts
+├── package.json
+├── pnpm-lock.yaml
 └── README.md
 ```
