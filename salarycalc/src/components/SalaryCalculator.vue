@@ -2,7 +2,7 @@
   import { ref } from 'vue'
   import { calculateNetSalary } from "../lib/salary.ts";
 
-  const defaultTaxRate = 30;
+  const defaultTaxRate = 25;
 
   const grossSalary = ref<number>(0);
   const taxRate = ref<number>(defaultTaxRate);
