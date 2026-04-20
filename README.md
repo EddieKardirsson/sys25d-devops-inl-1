@@ -96,7 +96,7 @@ To run tests manually:
 cd salarycalc 
 pnpm test
 ```
-or just `pnpm test` from the project root, since you're probably already in the `salarycalc/` folder.
+If you're already in the `salarycalc/` folder, you can skip the `cd salarycalc` step and just run `pnpm test` there.
 
 ---
 
