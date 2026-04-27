@@ -1,6 +1,6 @@
 # SalaryCalc – CI/CD with GitHub Actions
 
-This project is part of **Assignment 1 – CI/CD** in the DevOps course at Medieinstitutet.
+This project is part of **Assignment 1 – CI/CD** in the DevOps course at Medieinstitutet. And this repo is a fork of the original GitHub classroom repo.
 
 The goal of the assignment is not to build a complex application, but to demonstrate a complete **CI/CD pipeline** with automated testing, build, and deployment to a cloud platform.
 
